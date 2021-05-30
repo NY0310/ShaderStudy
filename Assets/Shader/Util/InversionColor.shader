@@ -1,4 +1,4 @@
-﻿Shader "Hidden/InversionColor"
+﻿Shader "InversionColor"
 {
     Properties
     {

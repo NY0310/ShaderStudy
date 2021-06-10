@@ -1,18 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
+// using UnityEngine.Rendering;
 
-public class ToonRenderPipelineAsset : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+// namespace Toguchi.Rendering
+// {
+//     [ExecuteInEditMode]
+//     [CreateAssetMenu(menuName = "ToonRenderPipelineAsset")]
+//     public class ToonRenderPipelineAsset : RenderPipelineAsset
+//     {
+//         [SerializeField]
+//         private float modelRenderResolutionRate = 0.7f;
+//         public float ModelRenderResolutionRate => modelRenderResolutionRate;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+//         protected override RenderPipeline CreatePipeline()
+//         {
+//             return new ToonRenderPipeline(this);
+//         }
+//     }
+// }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +11,7 @@ public class DrawObjAssetPipe : RenderPipelineAsset
 {
     [SerializeField]
     private float modelRenderResolutionRate = 0.7f;
-    public float ModelRenderResolutionRate = modelRenderResolutionRate;
+    public float ModelRenderResolutionRate => modelRenderResolutionRate;
     protected override RenderPipeline CreatePipeline()
     {
         return new DrawObjPipeInstance(this);
@@ -82,6 +82,7 @@ public class DrawObjPipeInstance : RenderPipeline
             {
                 continue;
             }
+            // ScriptableCullingParametersに基づいてカリングする
             cullingResults = context.Cull(ref cullingParameters);
 
             // RenderTexture作成
@@ -154,7 +155,27 @@ public class DrawObjPipeInstance : RenderPipeline
         }
     }
 
-    private void SetupLights(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
+
+    private void ClearModelRenderTexture(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
+    {
+        commandBuffer.Clear();
+
+        // RenderTarget設定
+        commandBuffer.SetRenderTarget(renderTargetIdentifiers[(int)RenderTextureType.ModelColor], renderTargetIdentifiers[(int)RenderTextureType.ModelDepth]);
+
+        if (camera.clearFlags == CameraClearFlags.Depth || camera.clearFlags == CameraClearFlags.Skybox)
+        {
+            commandBuffer.ClearRenderTarget(true, false, Color.black, 1.0f);
+        }
+        else if (camera.clearFlags == CameraClearFlags.SolidColor)
+        {
+            commandBuffer.ClearRenderTarget(true, true, camera.backgroundColor, 1.0f);
+        }
+
+        context.ExecuteCommandBuffer(commandBuffer);
+    }
+
+     private void SetupLights(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
     {
         commandBuffer.Clear();
 
@@ -194,25 +215,9 @@ public class DrawObjPipeInstance : RenderPipeline
         }
     }
 
-    private void ClearModelRenderTexture(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
-    {
-        commandBuffer.Clear();
-
-        // RenderTarget設定
-        commandBuffer.SetRenderTarget(renderTargetIdentifiers[(int)RenderTextureType.ModelColor], renderTargetIdentifiers[(int)RenderTextureType.ModelDepth]);
-
-        if (camera.clearFlags == CameraClearFlags.Depth || camera.clearFlags == CameraClearFlags.Skybox)
-        {
-            commandBuffer.ClearRenderTarget(true, false, Color.black, 1.0f);
-        }
-        else if (camera.clearFlags == CameraClearFlags.SolidColor)
-        {
-            commandBuffer.ClearRenderTarget(true, true, camera.backgroundColor, 1.0f);
-        }
-
-        context.ExecuteCommandBuffer(commandBuffer);
-    }
-
+    /// <summary>
+    /// 不透明オブジェクトの描画
+    /// </summary>
     private void DrawOpaque(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
     {
         commandBuffer.Clear();
@@ -220,11 +225,15 @@ public class DrawObjPipeInstance : RenderPipeline
         commandBuffer.SetRenderTarget(renderTargetIdentifiers[(int)RenderTextureType.ModelColor], renderTargetIdentifiers[(int)RenderTextureType.ModelDepth]);
         context.ExecuteCommandBuffer(commandBuffer);
 
-        // Filtering, Sort
+        // 描画順 https://docs.unity3d.com/ja/current/ScriptReference/Rendering.SortingCriteria.html
         var sortingSettings = new SortingSettings(camera) { criteria = SortingCriteria.CommonOpaque };
+        // ここで指定したTagを記述したシェーダーのみ描画される
         var settings = new DrawingSettings(new ShaderTagId(FORWARD_SHADER_TAG), sortingSettings);
+        // https://docs.unity3d.com/ScriptReference/Rendering.FilteringSettings.html
         var filterSettings = new FilteringSettings(
+            // 指定されたレンダーキューの間のオブジェクトのみ描画する(0-2500)
             new RenderQueueRange(0, (int)RenderQueue.GeometryLast),
+            // カメラに指定されたレイヤーのみ描画する
             camera.cullingMask
             );
 

@@ -252,6 +252,7 @@ public class DrawObjPipeInstance : RenderPipeline
         var sortingSettings = new SortingSettings(camera) { criteria = SortingCriteria.CommonTransparent };
         var settings = new DrawingSettings(new ShaderTagId(FORWARD_SHADER_TAG), sortingSettings);
         var filterSettings = new FilteringSettings(
+            // 指定されたレンダーキューの間のオブジェクトのみ描画する(2500-3000)
             new RenderQueueRange((int)RenderQueue.GeometryLast, (int)RenderQueue.Transparent),
             camera.cullingMask
             );

@@ -82,7 +82,7 @@ public class DrawObjPipeInstance : RenderPipeline
             {
                 continue;
             }
-            // ScriptableCullingParametersに基づいてカリングする
+            // ScriptableCullingParametersに基づいてカリングをスケジュール
             cullingResults = context.Cull(ref cullingParameters);
 
             // RenderTexture作成
@@ -134,6 +134,9 @@ public class DrawObjPipeInstance : RenderPipeline
         context.Submit();
     }
 
+    /// <summary>
+    /// レンダーテクスチャ作成
+    /// </summary>
     private void CreateRenderTexture(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
     {
         commandBuffer.Clear();
@@ -143,19 +146,25 @@ public class DrawObjPipeInstance : RenderPipeline
 
         var modelWidth = (int)((float)width * drawObjAssetPipe.ModelRenderResolutionRate);
         var modelHeight = (int)((float)height * drawObjAssetPipe.ModelRenderResolutionRate);
-
+        
+        // カラー用とデプス用RenderTextureを作成
         commandBuffer.GetTemporaryRT((int)RenderTextureType.ModelColor, modelWidth, modelHeight, 0, FilterMode.Bilinear, RenderTextureFormat.Default);
         commandBuffer.GetTemporaryRT((int)RenderTextureType.ModelDepth, modelWidth, modelHeight, 0, FilterMode.Point, RenderTextureFormat.Depth);
 
+        // コマンドバッファの実行をスケジュールします。
+        // https://docs.unity3d.com/ScriptReference/Rendering.ScriptableRenderContext.ExecuteCommandBuffer.html
         context.ExecuteCommandBuffer(commandBuffer);
 
+        // RenderTextureの識別子を生成
         for (int i = 0; i < (int)RenderTextureType.Count; i++)
         {
             renderTargetIdentifiers[i] = new RenderTargetIdentifier(i);
         }
     }
 
-
+    /// <summary>
+    /// RenderTextureをクリア
+    /// </summary>
     private void ClearModelRenderTexture(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
     {
         commandBuffer.Clear();
@@ -175,6 +184,9 @@ public class DrawObjPipeInstance : RenderPipeline
         context.ExecuteCommandBuffer(commandBuffer);
     }
 
+    /// <summary>
+    /// ライトのセットアップ
+    /// </summary>
      private void SetupLights(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
     {
         commandBuffer.Clear();
@@ -196,6 +208,7 @@ public class DrawObjPipeInstance : RenderPipeline
             break;
         }
 
+        // ディレクショナルライトが無効の時、シェーダーのライトヴァリアントを無効に
         if (lightIndex < 0)
         {
             commandBuffer.DisableShaderKeyword("ENABLE_DIRECTIONAL_LIGHT");
@@ -203,7 +216,7 @@ public class DrawObjPipeInstance : RenderPipeline
             return;
         }
 
-        // ライトのパラメータ設定
+        // ディレクショナルライトが有効の時、シェーダーライトヴァリアントの有効に
         {
             var visibleLight = cullingResults.visibleLights[lightIndex];
             var light = visibleLight.light;
@@ -241,6 +254,9 @@ public class DrawObjPipeInstance : RenderPipeline
         context.DrawRenderers(cullingResults, ref settings, ref filterSettings);
     }
 
+    /// <summary>
+    /// 半透明オブジェクトの描画
+    /// </summary>
     private void DrawTransparent(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
     {
         commandBuffer.Clear();
@@ -261,10 +277,13 @@ public class DrawObjPipeInstance : RenderPipeline
         context.DrawRenderers(cullingResults, ref settings, ref filterSettings);
     }
 
+    /// <summary>
+    /// 画面に対して描画する
+    /// </summary>
     private void RestoreCameraTarget(ScriptableRenderContext context, CommandBuffer commandBuffer)
     {
         commandBuffer.Clear();
-
+        
         var cameraTarget = new RenderTargetIdentifier(BuiltinRenderTextureType.CameraTarget);
 
         commandBuffer.SetRenderTarget(cameraTarget);

@@ -57,6 +57,7 @@
                 return diffuse;
             }
             
+            // 幾何減衰項(V項) マイクロファセットによる凹凸があると、反射した光の一部がその凹凸によりが遮蔽されます。
             inline float V_SmithGGXCorrelated(float ndotl, float ndotv, float alpha)
             {
                 float lambdaV = ndotl * (ndotv * (1 - alpha) + alpha);
@@ -65,6 +66,7 @@
                 return 0.5f / (lambdaV + lambdaL + 0.0001);
             }
 
+            // 法線分布関数（D項）マイクロファセットの多さ
             inline half D_GGX(half perceptualRoughness, half ndoth, half3 normal, half3 halfDir) {
                 half3 ncrossh = cross(normal, halfDir);
                 half a = ndoth * perceptualRoughness;
@@ -73,6 +75,7 @@
                 return min(d, 65504.0h);
             }
 
+            // フレネル項(F項)
             inline half3 F_Schlick(half3 f0, half cos)
             {
                 return f0 + (1 - f0) * pow(1 - cos, 5);

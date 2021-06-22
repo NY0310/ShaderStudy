@@ -45,6 +45,7 @@
             // 誘電体の反射率（F0）は4%とする
             #define _DielectricF0 0.04
 
+            // 拡散反射モデル
             inline half Fd_Burley(half ndotv, half ndotl, half ldoth, half roughness)
             {
                 half fd90 = 0.5 + 2 * ldoth * ldoth * roughness;
@@ -123,6 +124,7 @@
 
             half4 frag(v2f i) : SV_Target
             {
+                // 原色
                 half3 albedo = tex2D(_MainTex, i.uv).rgb * _Color.rgb;
                 half metallic = _Metallic;
                 half perceptualRoughness = _Roughness;

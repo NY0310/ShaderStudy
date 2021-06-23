@@ -58,7 +58,7 @@
                 return diffuse;
             }
             
-            // 幾何減衰項(V項) マイクロファセットによる凹凸があると、反射した光の一部がその凹凸によりが遮蔽されます。
+            // 幾何減衰項(V項) 
             inline float V_SmithGGXCorrelated(float ndotl, float ndotv, float alpha)
             {
                 float lambdaV = ndotl * (ndotv * (1 - alpha) + alpha);

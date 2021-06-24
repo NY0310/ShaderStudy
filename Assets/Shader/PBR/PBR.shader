@@ -106,6 +106,7 @@
                 specular *= UNITY_PI;
                 specular = max(0, specular);
 
+                // ディフューズ＋スペキュラー
                 half3 color = diffuse + specular;
                 return half4(color, 1);
             }

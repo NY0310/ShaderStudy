@@ -1,4 +1,4 @@
-﻿Shader "Hidden/NeutralTonemap"
+﻿Shader "Custom/NeutralTonemap"
 {
     Properties
     {
@@ -16,7 +16,6 @@
             #pragma fragment frag
 
             #include "UnityCG.cginc"
-            #include "FPSSample/Packages/com.unity.postprocessing/PostProcessing/Shaders/Colors.hlsl"
 
             struct appdata
             {
@@ -40,11 +39,22 @@
 
             sampler2D _MainTex;
 
+            fixed3 ACESToneMap(fixed3 color)
+            {
+                const float a = 2.51;
+                const float b = 0.03;
+                const float c = 2.43;
+                const float d = 0.59;
+                const float e = 0.14;
+                return saturate(
+                    color * (a * color + b) /
+                    (color * (c * color + d) + e) );
+            }
+
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
-                col.rgb = NeutralTonemap(col.rgb);
-                return col;
+                return fixed4(ACESToneMap(col.rgb),1);
             }
             ENDCG
         }

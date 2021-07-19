@@ -1,0 +1,528 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/y-nakata/Documents/ShaderStudy
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+57452
+Successfully changed project path to: /Users/y-nakata/Documents/ShaderStudy
+/Users/y-nakata/Documents/ShaderStudy
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 57.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/y-nakata/Documents/ShaderStudy/Assets
+GfxDevice: creating device client; threaded=0
+2021-07-16 10:04:53.014 Unity[86515:2443653] Color LCD preferred device: AMD Radeon Pro 5300M (high power)
+2021-07-16 10:04:53.014 Unity[86515:2443653] Metal devices available: 2
+2021-07-16 10:04:53.014 Unity[86515:2443653] 0: AMD Radeon Pro 5300M (high power)
+2021-07-16 10:04:53.014 Unity[86515:2443653] 1: Intel(R) UHD Graphics 630 (low power)
+2021-07-16 10:04:53.014 Unity[86515:2443653] Using device AMD Radeon Pro 5300M (high power)
+Initializing Metal device caps: AMD Radeon Pro 5300M
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56515
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000572 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 53.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.878 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001957 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 57.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.303 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launching external process: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3031 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 193.2 MB.
+System memory in use after: 189.5 MB.
+
+Unloading 120 unused Assets to reduce memory usage. Loaded Objects now: 3375.
+Total: 7.732562 ms (FindLiveObjects: 0.291962 ms CreateObjectMapping: 0.136944 ms MarkObjects: 4.999102 ms  DeleteObjects: 2.303344 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Shader/Lighting/Fresnel/mat_fresnel.mat
+  artifactKey: Guid(79b0ddc8b71ab40bf85f1ee7e5a48fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Lighting/Fresnel/mat_fresnel.mat using Guid(79b0ddc8b71ab40bf85f1ee7e5a48fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1da8afa85c47d7b633227c59b4462e36') in 0.802289 seconds
+  Import took 0.807175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Shader/Lighting/Fresnel/Fresnel.shader
+  artifactKey: Guid(1663093bde4944b098a569bdaa904063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Lighting/Fresnel/Fresnel.shader using Guid(1663093bde4944b098a569bdaa904063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0c67ff0c326e6d366c360840efe69a4') in 1.817267 seconds
+  Import took 1.822014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Shader/Lighting
+  artifactKey: Guid(2fcaa4832db7849dca2389fc8b64531f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Lighting using Guid(2fcaa4832db7849dca2389fc8b64531f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '843c860365100d837c9a1691c36523bc') in 0.000839 seconds
+  Import took 0.004634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Shader/Lighting/Fresnel
+  artifactKey: Guid(8ccb34c842197475ebefbada66ded425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Lighting/Fresnel using Guid(8ccb34c842197475ebefbada66ded425) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c85bf6b404ee3ed11ffce76cd3aa696c') in 0.000848 seconds
+  Import took 0.004469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12062.348024 seconds.
+  path: Assets/Scenes/Fresnel.unity
+  artifactKey: Guid(f3d9ad1c76ea4452eb3a2c4a15891bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Fresnel.unity using Guid(f3d9ad1c76ea4452eb3a2c4a15891bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1d88d98ba01d001e9a975278ff7ebf3') in 0.008170 seconds
+  Import took 0.041304 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.432010 seconds.
+  path: Assets/Shader/SRP/1-BasicAssetPipe.asset
+  artifactKey: Guid(2f7acfbb1465b43198ae6dab3c0f45ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/SRP/1-BasicAssetPipe.asset using Guid(2f7acfbb1465b43198ae6dab3c0f45ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec5a6c346802a0710dd986366329689') in 0.182277 seconds
+  Import took 0.190658 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Shader/SRP/UniversalRenderPipelineAsset_Renderer.asset
+  artifactKey: Guid(6a0fc3887ff7447ddbb1f24f07492a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/SRP/UniversalRenderPipelineAsset_Renderer.asset using Guid(6a0fc3887ff7447ddbb1f24f07492a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d9faa79c69f5bffa2697aad3ff91bde') in 0.080566 seconds
+  Import took 0.086826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Shader/SRP/NewShaderVariants.shadervariants
+  artifactKey: Guid(0cdbc612818e14b49aee7751cca9220e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/SRP/NewShaderVariants.shadervariants using Guid(0cdbc612818e14b49aee7751cca9220e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a70daae7b46c7b0f62a079c8411c8f42') in 0.165528 seconds
+  Import took 0.171366 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Shader/SRP/UniversalRenderPipelineAsset.asset
+  artifactKey: Guid(6df572da73b994b6098b132e248af28d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/SRP/UniversalRenderPipelineAsset.asset using Guid(6df572da73b994b6098b132e248af28d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e66e89899f31995da0520d30a92d8b') in 0.032793 seconds
+  Import took 0.038791 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.931872 seconds.
+  path: Assets/Shader/ToneMapping/mat_ToneMapping.mat
+  artifactKey: Guid(03a42218b8e5b491a96d37e8e758ccd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/ToneMapping/mat_ToneMapping.mat using Guid(03a42218b8e5b491a96d37e8e758ccd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62dcd22be95ea2ab294911e811d7a7b6') in 0.069735 seconds
+  Import took 0.076100 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.540328 seconds.
+  path: Assets/Shader/Lighting/Fresnel/mat_fresnel.mat
+  artifactKey: Guid(79b0ddc8b71ab40bf85f1ee7e5a48fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Lighting/Fresnel/mat_fresnel.mat using Guid(79b0ddc8b71ab40bf85f1ee7e5a48fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00db7ac605a43e163068ea7aea46974') in 0.047798 seconds
+  Import took 0.053467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 146.902934 seconds.
+  path: Assets/Shader/Lighting/Fresnel/Fresnel.shader
+  artifactKey: Guid(1663093bde4944b098a569bdaa904063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Lighting/Fresnel/Fresnel.shader using Guid(1663093bde4944b098a569bdaa904063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47eecaa301a5b6acd5419636d85ab5bc') in 0.011953 seconds
+  Import took 0.018885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1173.049476 seconds.
+  path: Assets/Shader/Util/104482.jpeg
+  artifactKey: Guid(5fb64477ea3aa4b729898e51f6381db6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/104482.jpeg using Guid(5fb64477ea3aa4b729898e51f6381db6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c9199942b16d15472418ea198b6386') in 0.387563 seconds
+  Import took 0.394222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Shader/Util/StandardRed.mat
+  artifactKey: Guid(07506ec16bca44e50842a6014e2253f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/StandardRed.mat using Guid(07506ec16bca44e50842a6014e2253f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '876940731b53a59dacad3a71670abef4') in 0.043788 seconds
+  Import took 0.048950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Shader/Util/earth.jpeg
+  artifactKey: Guid(3ed7b27dddae942bba68f0a7db07d465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/earth.jpeg using Guid(3ed7b27dddae942bba68f0a7db07d465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffdee77f78041f6e68978816f2ce470f') in 0.006602 seconds
+  Import took 0.011372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Shader/Util/cattex.png
+  artifactKey: Guid(98113e3297d8545cf9ab3b930970c4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/cattex.png using Guid(98113e3297d8545cf9ab3b930970c4a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '935d0ae659d0f22112fd68b6415b7b58') in 0.332025 seconds
+  Import took 0.337854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Shader/Util/Sphere.prefab
+  artifactKey: Guid(2c416fc57258c44a4b8e6960b1b0b04b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/Sphere.prefab using Guid(2c416fc57258c44a4b8e6960b1b0b04b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36dba9dc2c2acd3f804ae98308dab614') in 0.223999 seconds
+  Import took 0.229856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Shader/Util/FX01_Flare_01.png
+  artifactKey: Guid(ecd4dc604267046b69b02f892932aeaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/FX01_Flare_01.png using Guid(ecd4dc604267046b69b02f892932aeaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '680cfca9b1421a6e0c4fab5ea47d17d6') in 0.008966 seconds
+  Import took 0.014234 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.687815 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8953edad3984a2a2d3d1a24dc05758a') in 0.335553 seconds
+  Import took 0.340796 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002261 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.175 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3027 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 232.5 MB.
+System memory in use after: 228.9 MB.
+
+Unloading 109 unused Assets to reduce memory usage. Loaded Objects now: 3426.
+Total: 8.563973 ms (FindLiveObjects: 0.435193 ms CreateObjectMapping: 0.221914 ms MarkObjects: 5.527782 ms  DeleteObjects: 2.377958 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 236.151894 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0f2f4179020c984de7cdbfa9c95cc80') in 0.009236 seconds
+  Import took 0.015039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.737501 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bde9215e07996b093ea514077a53098') in 0.001484 seconds
+  Import took 0.006817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.772901 seconds.
+  path: Assets/Shader/PBR/PBR.mat
+  artifactKey: Guid(96ad0f83dc38945ec8a0341c2d01628c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/PBR.mat using Guid(96ad0f83dc38945ec8a0341c2d01628c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab86e6d255d7aec4e73aa3a8db701688') in 0.130261 seconds
+  Import took 0.135630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.411689 seconds.
+  path: Assets/Shader/Lighting/Lamvart/mat_Lambart.mat
+  artifactKey: Guid(2612e2f12c09f4ce4843ec6b5562dc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Lighting/Lamvart/mat_Lambart.mat using Guid(2612e2f12c09f4ce4843ec6b5562dc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e30ddd125e3a6337f1cfe835501218e') in 0.054343 seconds
+  Import took 0.059692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.397312 seconds.
+  path: Assets/Shader/Lighting/Fresnel/mat_fresnel.mat
+  artifactKey: Guid(79b0ddc8b71ab40bf85f1ee7e5a48fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Lighting/Fresnel/mat_fresnel.mat using Guid(79b0ddc8b71ab40bf85f1ee7e5a48fd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d6ef9a766f06dcb6131e24dbedf2575') in 0.014121 seconds
+  Import took 0.019726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.946169 seconds.
+  path: Assets/Shader/Lighting/Fresnel/Fresnel.shader
+  artifactKey: Guid(1663093bde4944b098a569bdaa904063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Lighting/Fresnel/Fresnel.shader using Guid(1663093bde4944b098a569bdaa904063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e327538c4d5d4f60fcc315293f9c70c') in 0.001731 seconds
+  Import took 0.006758 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013175 seconds.
+  path: Assets/Shader/Lighting/Fresnel/Fresnel.shader
+  artifactKey: Guid(1663093bde4944b098a569bdaa904063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Lighting/Fresnel/Fresnel.shader using Guid(1663093bde4944b098a569bdaa904063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e327538c4d5d4f60fcc315293f9c70c') in 0.001800 seconds
+  Import took 0.006887 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 259.222569 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3faeda92613b806329b83fcf2bcc7e8') in 0.001473 seconds
+  Import took 0.007189 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.075721 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa886fb5ddbef42608d99ccab68789d') in 0.002703 seconds
+  Import took 0.008408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.188444 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '975123a5c52d600fc60765ee71ca2d45') in 0.001633 seconds
+  Import took 0.006892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 69.728651 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10eb6e84b7afdc2a0beb3536ba9b1fed') in 0.001409 seconds
+  Import took 0.007094 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003230 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10eb6e84b7afdc2a0beb3536ba9b1fed') in 0.001439 seconds
+  Import took 0.006497 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.951452 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39a0d0ae5ba8eae694918f37f6c10034') in 0.001622 seconds
+  Import took 0.007555 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.909731 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '080e6ce05c34db4000b60c891a76e162') in 0.001485 seconds
+  Import took 0.007125 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.309753 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3cb147813ad5d376f1ea60b9510fe56') in 0.001482 seconds
+  Import took 0.006556 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003958 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3cb147813ad5d376f1ea60b9510fe56') in 0.001521 seconds
+  Import took 0.006508 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.463062 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bf36d25f6a1648ab67834a3d1592ebe') in 0.001441 seconds
+  Import took 0.007146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001398 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bf36d25f6a1648ab67834a3d1592ebe') in 0.001428 seconds
+  Import took 0.006145 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001975 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.113 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3025 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 233.1 MB.
+System memory in use after: 229.5 MB.
+
+Unloading 106 unused Assets to reduce memory usage. Loaded Objects now: 3432.
+Total: 7.756583 ms (FindLiveObjects: 0.301564 ms CreateObjectMapping: 0.149197 ms MarkObjects: 4.981049 ms  DeleteObjects: 2.323595 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.613486 seconds.
+  path: Assets/Shader/Util/UpdateTrans.cs
+  artifactKey: Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Util/UpdateTrans.cs using Guid(1a492352930f9459da9c4bc64beba0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1620e4548077597a3e4bd2f3cfecf86a') in 0.005273 seconds
+  Import took 0.009955 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002834 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.084 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3023 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 233.3 MB.
+System memory in use after: 229.8 MB.
+
+Unloading 106 unused Assets to reduce memory usage. Loaded Objects now: 3435.
+Total: 7.413074 ms (FindLiveObjects: 0.297232 ms CreateObjectMapping: 0.152082 ms MarkObjects: 4.675153 ms  DeleteObjects: 2.287543 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003524 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.068 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3023 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 233.8 MB.
+System memory in use after: 230.2 MB.
+
+Unloading 106 unused Assets to reduce memory usage. Loaded Objects now: 3438.
+Total: 8.424849 ms (FindLiveObjects: 0.326899 ms CreateObjectMapping: 0.128470 ms MarkObjects: 5.162963 ms  DeleteObjects: 2.805201 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002881 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.025 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3023 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.1 MB.
+System memory in use after: 230.5 MB.
+
+Unloading 106 unused Assets to reduce memory usage. Loaded Objects now: 3441.
+Total: 7.732751 ms (FindLiveObjects: 0.305259 ms CreateObjectMapping: 0.147083 ms MarkObjects: 4.719713 ms  DeleteObjects: 2.559611 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006977 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.077 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3023 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 234.5 MB.
+System memory in use after: 231.0 MB.
+
+Unloading 106 unused Assets to reduce memory usage. Loaded Objects now: 3444.
+Total: 8.847104 ms (FindLiveObjects: 0.329971 ms CreateObjectMapping: 0.155275 ms MarkObjects: 5.679605 ms  DeleteObjects: 2.680788 ms)
+

@@ -33,7 +33,11 @@
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.vdotn = dot(normalize(ObjSpaceViewDir(v.vertex)), v.normal);
+
+                float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                half3 eyeDir = UnityWorldSpaceViewDir(worldPos);
+
+                o.vdotn = dot(normalize(eyeDir), UnityObjectToWorldNormal(v.normal));
                 return o;
             }
             

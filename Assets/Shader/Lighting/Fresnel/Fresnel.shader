@@ -1,4 +1,4 @@
-﻿Shader "Hidden/Fresnel"
+﻿Shader "Fresnel"
 {
     Properties
     {
@@ -15,7 +15,7 @@
 
             #include "UnityCG.cginc"
 
-            half _Metalness;
+            half _F0;
 
             struct appdata
             {
@@ -33,16 +33,17 @@
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                half3 viewDir   = normalize(ObjSpaceViewDir(v.vertex));
-                o.vdotn         = dot(viewDir, v.normal.xyz);
+
+                float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                half3 eyeDir = UnityWorldSpaceViewDir(worldPos);
+
+                o.vdotn = dot(normalize(eyeDir), UnityObjectToWorldNormal(v.normal));
                 return o;
             }
             
             fixed4 frag (v2f i) : SV_Target
             {
-                // 金属性に応じてF0を変える
-                half f0         = _Metalness;
-                half fresnel    = f0 + (1.0h - f0) * pow(1.0h - i.vdotn, 5);
+                half fresnel = _F0 + (1.0h - _F0) * pow(1.0h - i.vdotn, 5);
                 return fresnel;
             }
             ENDCG

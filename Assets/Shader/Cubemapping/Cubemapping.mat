@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mat_fresnel
-  m_Shader: {fileID: 4800000, guid: 1663093bde4944b098a569bdaa904063, type: 3}
+  m_Name: Cubemapping
+  m_Shader: {fileID: 4800000, guid: 60da64c5169924b3ab5f4f23f74b9ae8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -23,6 +23,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 8900000, guid: 85b8ba29bb7304c3fa232c36b2ec1e42, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 1.8}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -60,7 +64,6 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _F0: 0.02
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1

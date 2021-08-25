@@ -146,7 +146,7 @@ public class DrawObjPipeInstance : RenderPipeline
 
         var modelWidth = (int)((float)width * drawObjAssetPipe.ModelRenderResolutionRate);
         var modelHeight = (int)((float)height * drawObjAssetPipe.ModelRenderResolutionRate);
-        
+
         // カラー用とデプス用RenderTextureを作成
         commandBuffer.GetTemporaryRT((int)RenderTextureType.ModelColor, modelWidth, modelHeight, 0, FilterMode.Bilinear, RenderTextureFormat.Default);
         commandBuffer.GetTemporaryRT((int)RenderTextureType.ModelDepth, modelWidth, modelHeight, 0, FilterMode.Point, RenderTextureFormat.Depth);
@@ -187,7 +187,7 @@ public class DrawObjPipeInstance : RenderPipeline
     /// <summary>
     /// ライトのセットアップ
     /// </summary>
-     private void SetupLights(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
+    private void SetupLights(ScriptableRenderContext context, Camera camera, CommandBuffer commandBuffer)
     {
         commandBuffer.Clear();
 
@@ -216,7 +216,7 @@ public class DrawObjPipeInstance : RenderPipeline
             return;
         }
 
-        // ディレクショナルライトが有効の時、シェーダーライトヴァリアントの有効に
+        // ディレクショナルライトが有効の時、シェーダーのライトヴァリアントの有効に
         {
             var visibleLight = cullingResults.visibleLights[lightIndex];
             var light = visibleLight.light;
@@ -283,7 +283,7 @@ public class DrawObjPipeInstance : RenderPipeline
     private void RestoreCameraTarget(ScriptableRenderContext context, CommandBuffer commandBuffer)
     {
         commandBuffer.Clear();
-        
+
         var cameraTarget = new RenderTargetIdentifier(BuiltinRenderTextureType.CameraTarget);
 
         commandBuffer.SetRenderTarget(cameraTarget);

@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: LinearWorkflow
   m_Shader: {fileID: 4800000, guid: aff67f807ef9f466191d54d4cedee507, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA _LINEAR_MODE_FAST
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -64,8 +64,6 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Intensity: 1
-    - _IsLiner: 0
-    - _Linear_Mode: 2
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1

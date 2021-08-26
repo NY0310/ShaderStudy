@@ -4,15 +4,15 @@ Shader "Hidden/LinearWorkflow"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _Intensity("Intensity", Range(0,1)) = 0
-        [KeywordEnum(None,Liner)]
-        _IsLiner("Is Liner", Float) = 0
+        [Toggle] _IsLiner("Is Liner", Float) = 0
     }
+    
     SubShader
     {
         // No culling or depth
        // Cull Off ZWrite Off ZTest Always
 
-//        #pragma multi_compile 
+        
 
         Pass
         {
@@ -21,6 +21,7 @@ Shader "Hidden/LinearWorkflow"
             #pragma fragment frag
 
             #include "UnityCG.cginc"
+            #pragma shader_feature _ISLINER_ON
 
             struct appdata
             {
@@ -52,7 +53,9 @@ Shader "Hidden/LinearWorkflow"
             {
                 fixed4 albed = tex2D(_MainTex, i.uv);
                 half lambert = max(0,dot(i.normal,WorldSpaceLightDir(i.vertex))) * _Intensity;
-               // return albed * lambert;
+                #ifdef _ISLINER_ON
+                return albed * lambert;
+                #endif
                 fixed4 lAlbed = pow(albed,2.2);
                 fixed4 retLColor = lAlbed * lambert;
                 fixed4 sRgbColor = pow(retLColor, 1 / 2.2);

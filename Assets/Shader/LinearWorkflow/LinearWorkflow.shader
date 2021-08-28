@@ -1,19 +1,15 @@
-Shader "Hidden/LinearWorkflow"
+Shader "LinearWorkflow"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
         _Intensity("Intensity", Range(0,1)) = 0
-        [Toggle] _USE_FAST("Is Liner", Float) = 0
+        [Toggle] _IS_LINEAR("Is Linear", Float) = 0
+        [Toggle] _USE_FAST("Use Fast", Float) = 0
     }
     
     SubShader
     {
-        // No culling or depth
-        // Cull Off ZWrite Off ZTest Always
-
-        
-
         Pass
         {
             CGPROGRAM
@@ -21,7 +17,8 @@ Shader "Hidden/LinearWorkflow"
             #pragma fragment frag
 
             #include "UnityCG.cginc"
-            #pragma shader_feature _ISLINER_ON
+            #pragma shader_feature _ _USE_FAST_ON
+            #pragma shader_feature _ _IS_LINEAR_ON
 
             struct appdata
             {
@@ -46,8 +43,6 @@ Shader "Hidden/LinearWorkflow"
                 return o;
             }
 
-            
-
             sampler2D _MainTex;
             half _Intensity;
 
@@ -62,9 +57,14 @@ Shader "Hidden/LinearWorkflow"
 
             half3 sRGBToLinear(half3 c)
             {
-                half3 linearRGBLo = c / 12.92;
-                half3 linearRGBHi = PositivePow((c + 0.055) / 1.055, half3(2.4, 2.4, 2.4));
-                half3 linearRGB = (c <= 0.04045) ? linearRGBLo : linearRGBHi;
+                half3 linearRGB;
+                #ifdef _USE_FAST_ON
+                    linearRGB = pow(c,2.2);
+                #else 
+                    half3 linearRGBLo = c / 12.92;
+                    half3 linearRGBHi = PositivePow((c + 0.055) / 1.055, half3(2.4, 2.4, 2.4));
+                    linearRGB = (c <= 0.04045) ? linearRGBLo : linearRGBHi;
+                #endif
                 return linearRGB;
             }
 
@@ -77,9 +77,14 @@ Shader "Hidden/LinearWorkflow"
 
             half3 LinearTosRGB(half3 c)
             {
-                half3 sRGBLo = c * 12.92;
-                half3 sRGBHi = (PositivePow(c, half3(1.0 / 2.4, 1.0 / 2.4, 1.0 / 2.4)) * 1.055) - 0.055;
-                half3 sRGB = (c <= 0.0031308) ? sRGBLo : sRGBHi;
+                half3 sRGB;
+                #ifdef _USE_FAST_ON
+                    sRGB = pow(c, 1 / 2.2);
+                #else
+                    half3 sRGBLo = c * 12.92;
+                    half3 sRGBHi = (PositivePow(c, half3(1.0 / 2.4, 1.0 / 2.4, 1.0 / 2.4)) * 1.055) - 0.055;
+                    sRGB = (c <= 0.0031308) ? sRGBLo : sRGBHi;
+                #endif
                 return sRGB;
             }
 
@@ -92,14 +97,12 @@ Shader "Hidden/LinearWorkflow"
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 albedo = tex2D(_MainTex, i.uv);
-                half lambert = max(0,dot(i.normal,WorldSpaceLightDir(i.vertex))) * _Intensity;
-                #if UNITY_COLORSPACE_GAMMA
-                    //albedo = pow(albedo,2.2);
+                #if UNITY_COLORSPACE_GAMMA && _IS_LINEAR_ON
                     albedo = sRGBToLinear(albedo);
                 #endif
+                half lambert = max(0,dot(i.normal,WorldSpaceLightDir(i.vertex))) * _Intensity;
                 fixed4 retColor = albedo * lambert;
-                #if UNITY_COLORSPACE_GAMMA
-                    //retColor = pow(retColor, 1 / 2.2);
+                #if UNITY_COLORSPACE_GAMMA && _IS_LINEAR_ON
                     retColor = LinearTosRGB(retColor);
                 #endif            
                 return retColor;

@@ -3,6 +3,7 @@ Shader "Hidden/TriPlanar"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _TillingScale("Tilling Scale",Float) =  0
     }
     SubShader
     {
@@ -34,6 +35,12 @@ Shader "Hidden/TriPlanar"
 
             float3 tex3D(sampler2D tex,float3 p, float3 n)
             {
+
+                float4 xaxis = tex2D(tex, p.yz);
+                float4 yaxis = tex2D(tex, p.xz);
+                float4 zaxis = tex2D(tex, p.xy);
+
+
                 float3 blending = abs(n);
                 blending = normalize(max(blending, 0.00001));
 
@@ -41,24 +48,9 @@ Shader "Hidden/TriPlanar"
                 float b = (blending.x + blending.y + blending.z);
                 blending /= b;
 
-                float4 xaxis = tex2D(tex, p.yz);
-                float4 yaxis = tex2D(tex, p.xz);
-                float4 zaxis = tex2D(tex, p.xy);
-
                 // blend the results of the 3 planar projections.
                 return (xaxis * blending.x + yaxis * blending.y + zaxis * blending.z).rgb;
             }
-
-// float3 TriPlanar(Texture2D tex,sampler _sampler,float3 p, float3 n)
-// {
-//     float3 blending = abs(n);
-//     blending /= dot(blending,1.0);
-//     //blending = blending * step(max(max(blending.x,blending.y),blending.z),blending);
-//     float4 xaxis = SAMPLE_TEXTURE2D(tex,_sampler, p.yz);
-//     float4 yaxis = SAMPLE_TEXTURE2D(tex,_sampler, p.xz);
-//     float4 zaxis = SAMPLE_TEXTURE2D(tex,_sampler, p.xy);
-//     return xaxis * blending.x + yaxis * blending.y + zaxis * blending.z;
-// }
 
             v2f vert (appdata v)
             {

@@ -12,71 +12,139 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50673
+63469
 Successfully changed project path to: /Users/y-nakata/Documents/ShaderStudy
 /Users/y-nakata/Documents/ShaderStudy
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 73.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 85.07 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/y-nakata/Documents/ShaderStudy/Assets
 GfxDevice: creating device client; threaded=0
-2021-08-27 14:05:52.524 Unity[45349:1209278] BenQ GW2255 preferred device: AMD Radeon Pro 5300M (high power)
-2021-08-27 14:05:52.524 Unity[45349:1209278] Metal devices available: 2
-2021-08-27 14:05:52.524 Unity[45349:1209278] 0: AMD Radeon Pro 5300M (high power)
-2021-08-27 14:05:52.524 Unity[45349:1209278] 1: Intel(R) UHD Graphics 630 (low power)
-2021-08-27 14:05:52.525 Unity[45349:1209278] Using device AMD Radeon Pro 5300M (high power)
+2021-09-13 10:20:31.304 Unity[761:4197658] BenQ GW2255 preferred device: AMD Radeon Pro 5300M (high power)
+2021-09-13 10:20:31.305 Unity[761:4197658] Metal devices available: 2
+2021-09-13 10:20:31.305 Unity[761:4197658] 0: AMD Radeon Pro 5300M (high power)
+2021-09-13 10:20:31.305 Unity[761:4197658] 1: Intel(R) UHD Graphics 630 (low power)
+2021-09-13 10:20:31.305 Unity[761:4197658] Using device AMD Radeon Pro 5300M (high power)
 Initializing Metal device caps: AMD Radeon Pro 5300M
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56349
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56761
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000512 seconds.
+Registered in 0.003495 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 49.47 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 55.88 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.343 seconds
+- Completed reload, in  1.964 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010552 seconds.
+Registered in 0.006978 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 51.40 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 69.22 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.218 seconds
+- Completed reload, in  1.496 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launching external process: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3037 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 194.8 MB.
-System memory in use after: 191.1 MB.
+Unloading 3039 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 195.4 MB.
+System memory in use after: 191.8 MB.
 
-Unloading 119 unused Assets to reduce memory usage. Loaded Objects now: 3382.
-Total: 8.628258 ms (FindLiveObjects: 0.395353 ms CreateObjectMapping: 0.187526 ms MarkObjects: 5.651547 ms  DeleteObjects: 2.392544 ms)
+Unloading 119 unused Assets to reduce memory usage. Loaded Objects now: 3384.
+Total: 9.041291 ms (FindLiveObjects: 0.431335 ms CreateObjectMapping: 0.204329 ms MarkObjects: 5.866552 ms  DeleteObjects: 2.536507 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Shader/LinearWorkflow/mountains-6564997_1920.jpg
-  artifactKey: Guid(dfb46959e3cb44284846b6ae9c63daea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/LinearWorkflow/mountains-6564997_1920.jpg using Guid(dfb46959e3cb44284846b6ae9c63daea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73a0734fba33a09b0163e4bff49b5f3e') in 0.434866 seconds
-  Import took 0.440925 seconds .
+  path: Assets/Shader/GetZPos/Depth.mat
+  artifactKey: Guid(a15b124cd3e91481f835c02018239c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/GetZPos/Depth.mat using Guid(a15b124cd3e91481f835c02018239c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Depth': invalid subscript 'projPos' at line 39 (on metal)
+
+Compiling Vertex program
+Platform defines: UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_DLDR_ENCODING
+Disabled keywords: UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_RGBM_ENCODING UNITY_LIGHTMAP_FULL_HDR UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+Shader error in 'Depth': invalid subscript 'projPos' at line 39 (on metal)
+
+Compiling Vertex program
+Platform defines: UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_DLDR_ENCODING
+Disabled keywords: UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_RGBM_ENCODING UNITY_LIGHTMAP_FULL_HDR UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30
+
+ -> (artifact id: '53c1502aebff6e15080b42dd994c0d11') in 0.451332 seconds
+  Import took 0.458329 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.216287 seconds.
+  path: Assets/Shader/GetZPos/Depth.shader
+  artifactKey: Guid(8efd0a0a553454e4689ea26b07409346) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/GetZPos/Depth.shader using Guid(8efd0a0a553454e4689ea26b07409346) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '668d3f2a1ce45a077f4be40a9818d2fe') in 2.179009 seconds
+  Import took 2.184990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.007082 seconds.
+  path: Assets/Scenes/PBR.unity
+  artifactKey: Guid(3b76edd9e1e8a45dbbd0241e43991b82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/PBR.unity using Guid(3b76edd9e1e8a45dbbd0241e43991b82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54e3c860f3d3a9ec94cc880a7f65da20') in 0.002207 seconds
+  Import took 0.008426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 67.424851 seconds.
+  path: Assets/Shader/PBR/PBR.mat
+  artifactKey: Guid(96ad0f83dc38945ec8a0341c2d01628c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/PBR.mat using Guid(96ad0f83dc38945ec8a0341c2d01628c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5aa10a9ac480156d23b222b2cf3e5b7') in 0.011474 seconds
+  Import took 0.017275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.562801 seconds.
+  path: Assets/Shader/PBR/NDF.mat
+  artifactKey: Guid(6f8e46203a3d2485aa330c2d11409c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/NDF.mat using Guid(6f8e46203a3d2485aa330c2d11409c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0ef821624b1009c61ccf96af934cf84') in 0.014693 seconds
+  Import took 0.020584 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.910803 seconds.
+  path: Assets/Shader/PBR/NDF.shader
+  artifactKey: Guid(8b4a58a1b034b4db49ff358f83b243f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/NDF.shader using Guid(8b4a58a1b034b4db49ff358f83b243f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1698645db9788fedf4e37f1682fead74') in 0.005546 seconds
+  Import took 0.011899 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18122.330895 seconds.
+  path: Assets/Shader/PBR/NDF.shader
+  artifactKey: Guid(8b4a58a1b034b4db49ff358f83b243f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/NDF.shader using Guid(8b4a58a1b034b4db49ff358f83b243f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee1eb7d8d446e3981293e53bbd9a3bfe') in 0.043574 seconds
+  Import took 0.149978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13849.448656 seconds.
+  path: Assets/Shader/PBR/NDF.shader
+  artifactKey: Guid(8b4a58a1b034b4db49ff358f83b243f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/NDF.shader using Guid(8b4a58a1b034b4db49ff358f83b243f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '283312933fedcd57a958b742d7998d8f') in 0.020160 seconds
+  Import took 0.060453 seconds .
 

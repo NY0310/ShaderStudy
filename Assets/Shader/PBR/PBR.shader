@@ -58,7 +58,7 @@
                 return diffuse;
             }
             
-            // 幾何減衰項(V項) 
+            // 幾何減衰項(V項) マイクロファセットの凹凸に遮れた反射光
             inline float V_SmithGGXCorrelated(float ndotl, float ndotv, float alpha)
             {
                 float lambdaV = ndotl * (ndotv * (1 - alpha) + alpha);
@@ -67,7 +67,7 @@
                 return 0.5f / (lambdaV + lambdaL + 0.0001);
             }
 
-            // 法線分布関数（D項）マイクロファセットの多さ
+            // 法線分布関数（D項）ハーフベクトル方向を向いているマイクロファセットの多さ
             inline half D_GGX(half perceptualRoughness, half ndoth, half3 normal, half3 halfDir) {
                 half3 ncrossh = cross(normal, halfDir);
                 half a = ndoth * perceptualRoughness;

@@ -21,14 +21,12 @@ Shader "Hidden/NDF"
             struct appdata
             {
                 float4 vertex : POSITION;
-                half2 texcoord : TEXCOORD0;
                 half3 normal : NORMAL;
             };
 
             struct v2f
             {
                 float4 vertex : SV_POSITION;
-                half2 uv : TEXCOORD0;
                 half3 worldNormal : TEXCOORD2;
                 half3 viewDir : TEXCOORD3;
             };
@@ -65,7 +63,7 @@ Shader "Hidden/NDF"
                 float3 halfDir = normalize(_WorldSpaceLightPos0.xyz + viewDir);
                 
                 half D = D_GGX(_Roughness,ndotv,normal,halfDir);
-                return fixed4(D * ndotl * _LightColor0.rgb,1);
+                return fixed4(D * _LightColor0.rgb,1);
             }
             ENDCG
         }

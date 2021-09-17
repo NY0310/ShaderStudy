@@ -1,4 +1,4 @@
-Shader "Hidden/NDF"
+Shader "NDF"
 {
     Properties
     {
@@ -7,9 +7,6 @@ Shader "Hidden/NDF"
     }
     SubShader
     {
-        // No culling or depth
-        //Cull Off ZWrite Off ZTest Always
-
         Pass
         {
             CGPROGRAM

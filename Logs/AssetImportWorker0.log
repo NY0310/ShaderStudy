@@ -193,3 +193,132 @@ System memory in use after: 212.0 MB.
 Unloading 110 unused Assets to reduce memory usage. Loaded Objects now: 3433.
 Total: 8.437031 ms (FindLiveObjects: 0.385865 ms CreateObjectMapping: 0.185634 ms MarkObjects: 5.510862 ms  DeleteObjects: 2.352976 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 33847.566466 seconds.
+  path: Assets/Shader/LinearWorkflow/LinearWorkflow.mat
+  artifactKey: Guid(084d8969b82ac484c91b4047b06453f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/LinearWorkflow/LinearWorkflow.mat using Guid(084d8969b82ac484c91b4047b06453f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62914ad1da5165899dc55cfa922d2a2a') in 0.373038 seconds
+  Import took 0.524759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000933 seconds.
+  path: Assets/Shader/LinearWorkflow/mountains-6564997_1920.jpg
+  artifactKey: Guid(dfb46959e3cb44284846b6ae9c63daea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/LinearWorkflow/mountains-6564997_1920.jpg using Guid(dfb46959e3cb44284846b6ae9c63daea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1a3c1bcefdf2ef00be69f904a31b585') in 0.413706 seconds
+  Import took 0.419214 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008390 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.224 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3031 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 221.7 MB.
+System memory in use after: 218.1 MB.
+
+Unloading 110 unused Assets to reduce memory usage. Loaded Objects now: 3438.
+Total: 9.192714 ms (FindLiveObjects: 0.434620 ms CreateObjectMapping: 0.189294 ms MarkObjects: 5.849883 ms  DeleteObjects: 2.717446 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 169.888332 seconds.
+  path: Assets/Shader/PBR/V2.mat
+  artifactKey: Guid(cfc53f08e5cc24ab8b1de7b1a567b22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/V2.mat using Guid(cfc53f08e5cc24ab8b1de7b1a567b22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59f913e4cb42a7de2079f2e87373ba7b') in 0.187253 seconds
+  Import took 0.193136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.794917 seconds.
+  path: Assets/Shader/PBR/V3.mat
+  artifactKey: Guid(fad8a1617dea743848c45f739068e2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/V3.mat using Guid(fad8a1617dea743848c45f739068e2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b31b82d8a726daff7fb4e4454362cfff') in 0.014347 seconds
+  Import took 0.020928 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.339013 seconds.
+  path: Assets/Shader/PBR/V4.mat
+  artifactKey: Guid(035c450b7174740e29ddd7f9e09fa84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/V4.mat using Guid(035c450b7174740e29ddd7f9e09fa84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8683f0647e75cf5e4890b529b731319d') in 0.012710 seconds
+  Import took 0.019268 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.046864 seconds.
+  path: Assets/Shader/PBR/V5.mat
+  artifactKey: Guid(b3f103aa441994c5da4ac728c016a856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/V5.mat using Guid(b3f103aa441994c5da4ac728c016a856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f2301d011ff163fae9609e284f9fc81') in 0.013582 seconds
+  Import took 0.020009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 52781.936654 seconds.
+  path: Assets/Shader/PBR/NDF.mat
+  artifactKey: Guid(6f8e46203a3d2485aa330c2d11409c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/NDF.mat using Guid(6f8e46203a3d2485aa330c2d11409c13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '135ff585a4ec26d6cea2fe1d0c4947c7') in 0.101402 seconds
+  Import took 0.136407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/Shader/PBR/V.mat
+  artifactKey: Guid(d6876b185601a47b4bc017015a8fcb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/V.mat using Guid(d6876b185601a47b4bc017015a8fcb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f62b629084ee4f622a1416c4faf68a32') in 0.118338 seconds
+  Import took 0.124848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Shader/PBR/V2.mat
+  artifactKey: Guid(cfc53f08e5cc24ab8b1de7b1a567b22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/V2.mat using Guid(cfc53f08e5cc24ab8b1de7b1a567b22e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07070cbc8ed4a6d0dab93c44e3b4c03c') in 0.012919 seconds
+  Import took 0.017759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Shader/PBR/V3.mat
+  artifactKey: Guid(fad8a1617dea743848c45f739068e2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/V3.mat using Guid(fad8a1617dea743848c45f739068e2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47d2b613d459d78f9f13c6cf22b406fa') in 0.011327 seconds
+  Import took 0.017034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Shader/PBR/V4.mat
+  artifactKey: Guid(035c450b7174740e29ddd7f9e09fa84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/V4.mat using Guid(035c450b7174740e29ddd7f9e09fa84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe8bc3a607827a8736ab459d1057de4f') in 0.015224 seconds
+  Import took 0.020266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Shader/PBR/V5.mat
+  artifactKey: Guid(b3f103aa441994c5da4ac728c016a856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/V5.mat using Guid(b3f103aa441994c5da4ac728c016a856) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0189012dff0a1d6b93fb4c431369900') in 0.010729 seconds
+  Import took 0.015962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26765.190338 seconds.
+  path: Assets/Shader/PBR/PBR.mat
+  artifactKey: Guid(96ad0f83dc38945ec8a0341c2d01628c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/PBR/PBR.mat using Guid(96ad0f83dc38945ec8a0341c2d01628c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db571ef8c9c66add738f4a589877201') in 0.145350 seconds
+  Import took 0.179564 seconds .
+

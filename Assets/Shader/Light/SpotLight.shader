@@ -25,6 +25,7 @@ Shader "Hidden/SpotLight"
             {
                 float4 positionOS : POSITION;
                 float2 uv : TEXCOORD0;
+                half3  normal : NORMAL;
             };
 
             struct v2f
@@ -32,6 +33,8 @@ Shader "Hidden/SpotLight"
                 float2 uv : TEXCOORD0;
                 float4 positionCS : SV_POSITION;
                 float3 positionWS : TEXCOORD1;
+                half3  viewDir    : TEXCOORD2;
+                half3  normalWS   : TEXCOORD3;
             };
 
             v2f vert (appdata v)
@@ -39,7 +42,10 @@ Shader "Hidden/SpotLight"
                 v2f o;
                 o.positionCS = UnityObjectToClipPos(v.positionOS);
                 o.positionWS = mul(unity_objecttoworld,v.positionOS);
+                o.viewDir = UnityWorldSpaceViewDir(o.positionWS);
+                o.normalWS = UnityObjectToWorldNormal(v.normal);
                 o.uv = v.uv;
+                o.
                 return o;
             }
 
@@ -85,13 +91,14 @@ Shader "Hidden/SpotLight"
                         // outer corn
                         attenuation *= pow((cosAlpha - outerHalfAngle)/(innerHalfAngle - outerHalfAngle), _SpotFalloff);
                     }
-                    half3 normal = normalize((vec4(vertex_normal, 0.0) * model_mat).xyz);
+
+                    //half3 normal = normalize((vec4(vertex_normal, 0.0) * model_mat).xyz);
                     half3 light = -nLightDir;
-                    float diffuse_power = clamp(dot(normal, light), 0.0, 1.0);
-                    half3 eye = -normalize(eye_dir);
-                    half3 half_vec = normalize(light + eye);
-                    float specular = pow(clamp(dot(normal, half_vec), 0.0, 1.0), specular_shininess);
-                    retColor = vertex_color * diffuse_color * diffuse_power * attenuation + ambient_color + specular_color * specular;
+                    float diffusePower = saturate(dot(normal, light));
+                    half3 eye = -normalize(i.viewDir);
+                    half3 halfVec = normalize(light + eye);
+                    float specular = pow(clamp(dot(normal, halfVec), 0.0, 1.0), specular_shininess);
+                    retColor = vertex_color * diffuse_color * diffusePower * attenuation + ambient_color + specular_color * specular;
                 }
 
                 return retColor;

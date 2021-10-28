@@ -2,16 +2,16 @@ Shader "Hidden/SpotLight"
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
-        _DistanceAttenuation ("LightAttenuation", Float) = 0.1　　// 距離減衰の係数
+        _Color ("Color", Color) = (1, 1, 1, 1)
+       // _DistanceAttenuation ("DistanceAttenuation", Float) = 0.1　　// 距離減衰の係数
         _SpotFalloff ("SpotFalloff", Float) = 0.1                // 減衰係数
-        _InnerCornAngle ("SpotTheta", Float) = 20               // スポットライト内側の角度
-        _OuterCornAngle ("OuterCornAngle", Float) = 40          // スポットライト外側の角度
+        _InnerCornAngle ("SpotTheta", Float) = 20.0               // スポットライト内側の角度
+        _OuterCornAngle ("OuterCornAngle", Float) = 40.0          // スポットライト外側の角度
     }
     SubShader
     {
         // No culling or depth
-        Cull Off ZWrite Off ZTest Always
+        //Cull Off ZWrite Off ZTest Always
 
         Pass
         {
@@ -41,11 +41,10 @@ Shader "Hidden/SpotLight"
             {
                 v2f o;
                 o.positionCS = UnityObjectToClipPos(v.positionOS);
-                o.positionWS = mul(unity_objecttoworld,v.positionOS);
+                o.positionWS = mul(unity_ObjectToWorld,v.positionOS);
                 o.viewDir = UnityWorldSpaceViewDir(o.positionWS);
                 o.normalWS = UnityObjectToWorldNormal(v.normal);
                 o.uv = v.uv;
-                o.
                 return o;
             }
 
@@ -54,11 +53,11 @@ Shader "Hidden/SpotLight"
             half _SpotFalloff;
             half _InnerCornAngle;
             half _OuterCornAngle;
+            half4 _Color;
 
             half4 frag (v2f i) : SV_Target
             {
                 half4 retColor = (0,0,0,1);
-                gl_Position = vec4(vertex_pos, 1.0) * pvm_mat;
                 // 焦点から頂点へのベクトル
                 half3 lightDir = UnityWorldSpaceLightDir(i.positionWS);
                 // ライトから頂点への距離
@@ -68,7 +67,7 @@ Shader "Hidden/SpotLight"
                 // ライトベクトルを正規化
                 half3 nLightDir = normalize(lightDir);
                 // 光源の向き
-                half3 nSporDir = normalize();
+                half3 nSporDir = normalize(_WorldSpaceLightPos0.xyz);
                 // ライトベクトルと光源ベクトルの角度
                 float cosAlpha = dot(nLightDir, nSporDir);
                 float innerHalfAngle = cos(_InnerCornAngle / 2.0);
@@ -77,7 +76,7 @@ Shader "Hidden/SpotLight"
                 {
                     // out-range
                     // attenuation * 0.f;
-                    retColor = ambient_color;
+                    retColor = _Color;
                 }
                 else
                 {
@@ -91,14 +90,16 @@ Shader "Hidden/SpotLight"
                         // outer corn
                         attenuation *= pow((cosAlpha - outerHalfAngle)/(innerHalfAngle - outerHalfAngle), _SpotFalloff);
                     }
-
+                    //half3 normal = normalize(i.normalWS);
                     //half3 normal = normalize((vec4(vertex_normal, 0.0) * model_mat).xyz);
-                    half3 light = -nLightDir;
-                    float diffusePower = saturate(dot(normal, light));
-                    half3 eye = -normalize(i.viewDir);
-                    half3 halfVec = normalize(light + eye);
-                    float specular = pow(clamp(dot(normal, halfVec), 0.0, 1.0), specular_shininess);
-                    retColor = vertex_color * diffuse_color * diffusePower * attenuation + ambient_color + specular_color * specular;
+                    // half3 light = -nLightDir;
+                    // float diffusePower = saturate(dot(normal, light));
+                    // half3 eye = -normalize(i.viewDir);
+                    // half3 halfVec = normalize(light + eye);
+                    // float specular = pow(saturate(dot(normal, halfVec)), specular_shininess);
+                    //retColor = vertex_color * diffuse_color * diffusePower * attenuation + AmbientColor + _SpecularColor * specular;
+                    retColor = _Color * attenuation;
+                    //retColor.a = 1;
                 }
 
                 return retColor;

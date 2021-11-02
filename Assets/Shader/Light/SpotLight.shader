@@ -70,8 +70,8 @@ Shader "Hidden/SpotLight"
                 half3 nSporDir = normalize(_WorldSpaceLightPos0.xyz);
                 // ライトベクトルと光源ベクトルの角度
                 float cosAlpha = dot(nLightDir, nSporDir);
-                float innerHalfAngle = cos(_InnerCornAngle / 2.0);
-                float outerHalfAngle = cos(_OuterCornAngle / 2.0);
+                float innerHalfAngle = cos(radians(_InnerCornAngle) / 2.0);
+                float outerHalfAngle = cos(degrees(_OuterCornAngle) / 2.0);
                 if (cosAlpha <= outerHalfAngle)
                 {
                     // out-range

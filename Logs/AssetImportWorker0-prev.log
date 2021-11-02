@@ -12,159 +12,127 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57769
+50733
 Successfully changed project path to: /Users/y-nakata/Documents/ShaderStudy
 /Users/y-nakata/Documents/ShaderStudy
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 59.85 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 87.65 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/y-nakata/Documents/ShaderStudy/Assets
 GfxDevice: creating device client; threaded=0
-2021-10-26 19:29:32.264 Unity[69545:4900864] Color LCD preferred device: AMD Radeon Pro 5300M (high power)
-2021-10-26 19:29:32.264 Unity[69545:4900864] Metal devices available: 2
-2021-10-26 19:29:32.264 Unity[69545:4900864] 0: AMD Radeon Pro 5300M (high power)
-2021-10-26 19:29:32.264 Unity[69545:4900864] 1: Intel(R) UHD Graphics 630 (low power)
-2021-10-26 19:29:32.265 Unity[69545:4900864] Using device AMD Radeon Pro 5300M (high power)
+2021-10-28 14:13:49.891 Unity[5876:115178] Color LCD preferred device: AMD Radeon Pro 5300M (high power)
+2021-10-28 14:13:49.892 Unity[5876:115178] Metal devices available: 2
+2021-10-28 14:13:49.892 Unity[5876:115178] 0: AMD Radeon Pro 5300M (high power)
+2021-10-28 14:13:49.892 Unity[5876:115178] 1: Intel(R) UHD Graphics 630 (low power)
+2021-10-28 14:13:49.893 Unity[5876:115178] Using device AMD Radeon Pro 5300M (high power)
 Initializing Metal device caps: AMD Radeon Pro 5300M
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56545
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56876
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.002093 seconds.
+Registered in 0.001925 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 64.56 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 50.51 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.938 seconds
+- Completed reload, in  2.012 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007188 seconds.
+Registered in 0.010870 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 52.90 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 55.06 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.232 seconds
+- Completed reload, in  1.186 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launching external process: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3043 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 195.8 MB.
 System memory in use after: 192.2 MB.
 
-Unloading 119 unused Assets to reduce memory usage. Loaded Objects now: 3388.
-Total: 6.966620 ms (FindLiveObjects: 0.347514 ms CreateObjectMapping: 0.142289 ms MarkObjects: 4.460784 ms  DeleteObjects: 2.015184 ms)
+Unloading 118 unused Assets to reduce memory usage. Loaded Objects now: 3389.
+Total: 9.255345 ms (FindLiveObjects: 0.353211 ms CreateObjectMapping: 0.172212 ms MarkObjects: 6.357641 ms  DeleteObjects: 2.369283 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Shader/Light/SpotLight.shader
-  artifactKey: Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLight.shader using Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6eeabde8a352ec1108ca214b39a279') in 1.777647 seconds
-  Import took 1.783360 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 94147.122353 seconds.
-  path: Assets/Shader/Light/SpotLight.shader
-  artifactKey: Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLight.shader using Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40cae1c1cd995c58a2616bc116ce71a2') in 0.067658 seconds
-  Import took 0.195961 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 257.832365 seconds.
-  path: Assets/Shader/Light/SpotLight.shader
-  artifactKey: Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLight.shader using Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12767b6204619cfd60167d52485fb0fc') in 0.001942 seconds
-  Import took 0.007807 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 197.033213 seconds.
-  path: Assets/Shader/Light/SpotLight.shader
-  artifactKey: Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLight.shader using Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eab97bccca00dea3684f2422f9ab95e') in 0.002497 seconds
-  Import took 0.008363 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.617570 seconds.
-  path: Assets/Shader/Light/SpotLight.shader
-  artifactKey: Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLight.shader using Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c9caac3b2505c79d7a7561577da6cc1') in 0.001882 seconds
-  Import took 0.007729 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 92.611625 seconds.
-  path: Assets/Shader/Light/SpotLight.shader
-  artifactKey: Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLight.shader using Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a97d5bc4661eb8e5b45103b12844dd4') in 0.002208 seconds
-  Import took 0.007942 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.780725 seconds.
-  path: Assets/Shader/Light/SpotLight.shader
-  artifactKey: Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLight.shader using Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7dd6115c5a2802b0ed64e05242465a') in 0.007877 seconds
-  Import took 0.014110 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000684 seconds.
-  path: Assets/Shader/Light/SpotLight.shader
-  artifactKey: Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLight.shader using Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7dd6115c5a2802b0ed64e05242465a') in 0.002678 seconds
-  Import took 0.006937 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.434692 seconds.
-  path: Assets/Shader/Light/SpotLight.shader
-  artifactKey: Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLight.shader using Guid(ad545efc66cc74aae851d05616e52d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e100107aca6399b74e39b6b7f0130a5a') in 0.002627 seconds
-  Import took 0.008213 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1355.804801 seconds.
-  path: Assets/Shader/Light/SpotLIght.mat
-  artifactKey: Guid(b1e43bb44146e440fa88ce91ccda0a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLIght.mat using Guid(b1e43bb44146e440fa88ce91ccda0a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7037bc899442ca834e1e54cab7cbe503') in 0.590354 seconds
-  Import took 0.595926 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.345865 seconds.
-  path: Assets/Scenes/SpotLIght.unity
-  artifactKey: Guid(ec20eb25ff0d64a438d0a4ed4e1408f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SpotLIght.unity using Guid(ec20eb25ff0d64a438d0a4ed4e1408f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57a79301acf2b56b0e22b7ed563094c2') in 0.004193 seconds
-  Import took 0.009103 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 205.155007 seconds.
   path: Assets/Shader/Light/SpotLight2.mat
   artifactKey: Guid(ad96a9b4537ac46e983157b65e17c9dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shader/Light/SpotLight2.mat using Guid(ad96a9b4537ac46e983157b65e17c9dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ba884035f25d3634fd68eedaf0766ef') in 0.015157 seconds
-  Import took 0.021139 seconds .
+Start importing Assets/Shader/Light/SpotLight2.mat using Guid(ad96a9b4537ac46e983157b65e17c9dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8554e79dbd573e1afb2ce2c1691163a1') in 0.513502 seconds
+  Import took 0.521698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/Shader/Light/SpotLIght.mat
+  artifactKey: Guid(b1e43bb44146e440fa88ce91ccda0a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/Light/SpotLIght.mat using Guid(b1e43bb44146e440fa88ce91ccda0a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eaa42a4611280b923725b249429ffae') in 0.010116 seconds
+  Import took 0.015063 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.106068 seconds.
+  path: Assets/Shader/NewImageEffectShader.shader
+  artifactKey: Guid(2f9950904d49f4cf98986157b68cb167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/NewImageEffectShader.shader using Guid(2f9950904d49f4cf98986157b68cb167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1713360dd718e875ec1076e3d9171ec') in 2.205985 seconds
+  Import took 2.211046 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 176.690380 seconds.
+  path: Assets/Shader/New Material.mat
+  artifactKey: Guid(8f143acbce7e84751912888f6f91af81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/New Material.mat using Guid(8f143acbce7e84751912888f6f91af81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd03d222c80abd8f1f7b0c78496668da') in 0.014133 seconds
+  Import took 0.019351 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 318.128794 seconds.
+  path: Assets/Shader/New Material.mat
+  artifactKey: Guid(8f143acbce7e84751912888f6f91af81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/New Material.mat using Guid(8f143acbce7e84751912888f6f91af81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da3bcd48ff8f4bc75fd1dc6afc21e41') in 0.045073 seconds
+  Import took 0.050638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14700.001234 seconds.
+  path: Assets/Shader/NewImageEffectShader.shader
+  artifactKey: Guid(2f9950904d49f4cf98986157b68cb167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/NewImageEffectShader.shader using Guid(2f9950904d49f4cf98986157b68cb167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a06d84b33de6140763933b5058f07597') in 0.016326 seconds
+  Import took 0.047413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.089812 seconds.
+  path: Assets/Shader/NewImageEffectShader.shader
+  artifactKey: Guid(2f9950904d49f4cf98986157b68cb167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/NewImageEffectShader.shader using Guid(2f9950904d49f4cf98986157b68cb167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd090d2af7d410fe479459536a2ca110c') in 0.004221 seconds
+  Import took 0.009682 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.242470 seconds.
+  path: Assets/Shader/NewImageEffectShader.shader
+  artifactKey: Guid(2f9950904d49f4cf98986157b68cb167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shader/NewImageEffectShader.shader using Guid(2f9950904d49f4cf98986157b68cb167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff78d12f0dab14c8dbcef5ae50edf503') in 0.004557 seconds
+  Import took 0.009697 seconds .
 

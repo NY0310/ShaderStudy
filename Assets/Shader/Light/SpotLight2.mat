@@ -63,19 +63,19 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _InnerCornAngle: 1
+    - _InnerCornAngle: 15.84
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OuterCornAngle: 76.4
+    - _OuterCornAngle: 29.3
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpotFalloff: 1
+    - _SpotFalloff: 0.24
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8091092, g: 0.8113208, b: 0.21048418, a: 1}
+    - _Color: {r: 1, g: 0, b: 0.05952406, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

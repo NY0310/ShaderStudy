@@ -12,6 +12,7 @@ Shader "Hidden/SpotLight"
     {
         // No culling or depth
         //Cull Off ZWrite Off ZTest Always
+        Tags { "LightMode"="ForwardBase" }
 
         Pass
         {
@@ -20,6 +21,7 @@ Shader "Hidden/SpotLight"
             #pragma fragment frag
 
             #include "UnityCG.cginc"
+            
 
             struct appdata
             {
@@ -35,6 +37,8 @@ Shader "Hidden/SpotLight"
                 float3 positionWS : TEXCOORD1;
                 half3  viewDir    : TEXCOORD2;
                 half3  normalWS   : TEXCOORD3;
+                half3  lightDir   : TEXCOORD4;
+                half3  spotDir   : TEXCOORD5;
             };
 
             v2f vert (appdata v)
@@ -44,6 +48,8 @@ Shader "Hidden/SpotLight"
                 o.positionWS = mul(unity_ObjectToWorld,v.positionOS);
                 o.viewDir = UnityWorldSpaceViewDir(o.positionWS);
                 o.normalWS = UnityObjectToWorldNormal(v.normal);
+                o.lightDir = UnityWorldSpaceLightDir(o.positionWS);
+                o.spotDir = normalize(_WorldSpaceLightPos0.xyz);
                 o.uv = v.uv;
                 return o;
             }
@@ -58,25 +64,25 @@ Shader "Hidden/SpotLight"
             half4 frag (v2f i) : SV_Target
             {
                 half4 retColor = (0,0,0,1);
-                // 焦点から頂点へのベクトル
-                half3 lightDir = UnityWorldSpaceLightDir(i.positionWS);
+
                 // ライトから頂点への距離
-                float lightLength = length(lightDir);
+                float lightLength = length(i.lightDir);
                 // 距離による減衰値
                 float attenuation = 1.0 / (_DistanceAttenuation * lightLength * lightLength);
                 // ライトベクトルを正規化
-                half3 nLightDir = normalize(lightDir);
+                half3 nLightDir = normalize(i.lightDir);
                 // 光源の向き
-                half3 nSporDir = normalize(_WorldSpaceLightPos0.xyz);
+                half3 nSporDir = normalize(i.spotDir);
                 // ライトベクトルと光源ベクトルの角度
                 float cosAlpha = dot(nLightDir, nSporDir);
                 float innerHalfAngle = cos(radians(_InnerCornAngle) / 2.0);
-                float outerHalfAngle = cos(degrees(_OuterCornAngle) / 2.0);
+                float outerHalfAngle = cos(radians(_OuterCornAngle) / 2.0);
                 if (cosAlpha <= outerHalfAngle)
                 {
                     // out-range
                     // attenuation * 0.f;
                     retColor = _Color;
+                    retColor = half4(0,1,0,0);
                 }
                 else
                 {
@@ -84,11 +90,13 @@ Shader "Hidden/SpotLight"
                     {
                         // inner corn
                         // attenuation * 1.f
+                         retColor = half4(0,0,1,0);
                     }
                     else
                     {
                         // outer corn
                         attenuation *= pow((cosAlpha - outerHalfAngle)/(innerHalfAngle - outerHalfAngle), _SpotFalloff);
+                        retColor = half4(1,0,0,0);
                     }
                     //half3 normal = normalize(i.normalWS);
                     //half3 normal = normalize((vec4(vertex_normal, 0.0) * model_mat).xyz);
@@ -98,7 +106,7 @@ Shader "Hidden/SpotLight"
                     // half3 halfVec = normalize(light + eye);
                     // float specular = pow(saturate(dot(normal, halfVec)), specular_shininess);
                     //retColor = vertex_color * diffuse_color * diffusePower * attenuation + AmbientColor + _SpecularColor * specular;
-                    retColor = _Color * attenuation;
+                    //   retColor = _Color * attenuation;
                     //retColor.a = 1;
                 }
 

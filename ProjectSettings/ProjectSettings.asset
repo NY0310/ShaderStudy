@@ -146,6 +146,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.DefaultCompany.ShaderStudy
     Standalone: com.DefaultCompany.ShaderStudy
   buildNumber:
     Standalone: 0

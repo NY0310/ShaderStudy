@@ -3,7 +3,7 @@ Shader "Hidden/ChromaticAberration"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _Expansion ("Expansion", Range(0.0, 1.0)) = 0.2
+        _Intensity ("Intensity", Range(0.0, 1.0)) = 0.1
     }
     SubShader
     {
@@ -39,17 +39,18 @@ Shader "Hidden/ChromaticAberration"
             }
 
             sampler2D _MainTex;
-            half _Expansion;
+            half _Intensity;
 
             fixed4 frag (v2f i) : SV_Target
             {
                 half4 col = tex2D(_MainTex, i.uv);
+                // uvを-0.5〜0.5にする
                 half2 uvBase = i.uv - 0.5h;
-                // R値を拡大したものに置き換える
-                half2 uvR = uvBase * (1.0h - _Expansion * 2.0h) + 0.5h;
+                // R値を拡大する
+                half2 uvR = uvBase * (1.0h - _Intensity * 2.0h) + 0.5h;
                 col.r = tex2D(_MainTex, uvR).r;
-                // G値を拡大したものに置き換える
-                half2 uvG = uvBase * (1.0h - _Expansion) + 0.5h;
+                // G値を拡大する
+                half2 uvG = uvBase * (1.0h - _Intensity) + 0.5h;
                 col.g = tex2D(_MainTex, uvG).g;
 
                 return col;

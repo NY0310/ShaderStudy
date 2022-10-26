@@ -317,3 +317,15 @@ Received Import Request.
   path: Packages/com.unity.render-pipelines.universal/Shaders/DepthNormalsPass.hlsl
   artifactKey: Guid(b76d45ea333b2a049bc45c5328ef3e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Packages/com.unity.render-pipelines.universal/Shaders/DepthNormalsPass.hlsl using Guid(b76d45ea333b2a049bc45c5328ef3e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d967bf2ffb3a008a76fcc0178d5d390') in 0.002992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 524.942425 seconds.
+  path: Assets/Samples/Universal RP/12.1.6/URP Package Samples
+  artifactKey: Guid(4ccdac01f81c14388871de434ba207bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Universal RP/12.1.6/URP Package Samples using Guid(4ccdac01f81c14388871de434ba207bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71c06f4329768950a39c6075d57cd7d9') in 0.001214 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.584717 seconds.
+  path: Assets/Samples/Universal RP/12.1.6/URP Package Samples/LensFlares/LensFlareShowroom.unity
+  artifactKey: Guid(768da1bbc4be4424f9b06e5cd2ebc062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Universal RP/12.1.6/URP Package Samples/LensFlares/LensFlareShowroom.unity using Guid(768da1bbc4be4424f9b06e5cd2ebc062) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4de72c80a967dc79c562a359eaa186b4') in 0.001748 seconds 

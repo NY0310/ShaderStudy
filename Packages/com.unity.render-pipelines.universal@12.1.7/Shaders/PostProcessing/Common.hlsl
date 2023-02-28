@@ -119,15 +119,23 @@ half3 ApplyTonemap(half3 input)
 
 half3 ApplyColorGrading(half3 input, float postExposure, TEXTURE2D_PARAM(lutTex, lutSampler), float3 lutParams, TEXTURE2D_PARAM(userLutTex, userLutSampler), float3 userLutParams, float userLutContrib)
 {
-    // Artist request to fine tune exposure in post without affecting bloom, dof etc
+    // ブルームや被写界深度などに影響を与えずにポストで露出を微調整するアーティストのリクエスト
     input *= postExposure;
 
     // HDR Grading:
     //   - Apply internal LogC LUT
     //   - (optional) Clamp result & apply user LUT
+    // HDR グレーディング:
+    // - 内部 LogC LUT を適用する
+    // - (オプション) 結果をクランプしてユーザー LUT を適用
+    // Grading ModeでHDRを選択
     #if _HDR_GRADING
     {
+        // リニア色空間からLogc色空間に変換
+        // HDRを選択した時はLUT
+        // LUTテクスチャのカラー値は、内部処理でリニア空間から「LogC 色空間」に変換されてから保存されます。
         float3 inputLutSpace = saturate(LinearToLogC(input)); // LUT space is in LogC
+        
         input = ApplyLut2D(TEXTURE2D_ARGS(lutTex, lutSampler), inputLutSpace, lutParams);
 
         UNITY_BRANCH
@@ -145,6 +153,7 @@ half3 ApplyColorGrading(half3 input, float postExposure, TEXTURE2D_PARAM(lutTex,
     //   - Apply tonemapping (result is clamped)
     //   - (optional) Apply user LUT
     //   - Apply internal linear LUT
+    // Grading ModeでLDRを選択
     #else
     {
         input = ApplyTonemap(input);

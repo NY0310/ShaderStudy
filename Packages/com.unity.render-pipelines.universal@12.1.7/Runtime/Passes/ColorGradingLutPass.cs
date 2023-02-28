@@ -165,11 +165,11 @@ public override void Execute(ScriptableRenderContext context, ref RenderingData 
                 default: break; 
             }
         }
-        // XR系処理のなので、無視
+        // XR系処理
         renderingData.cameraData.xr.StopSinglePass(cmd);
         // 描画実行
         cmd.Blit(null, m_InternalLut.id, material);
-        // XR系処理のなので、無視
+        // XR系処理
         renderingData.cameraData.xr.StartSinglePass(cmd);
     }
     context.ExecuteCommandBuffer(cmd);

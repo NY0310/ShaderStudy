@@ -4,12 +4,10 @@ using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.VFX;
 using Random = Unity.Mathematics.Random;
 
 public class Boids : MonoBehaviour
 {
-    // string/arrayは使えない
     public struct BoidState
     {
         public Vector3 Position;
@@ -20,11 +18,11 @@ public class Boids : MonoBehaviour
     public class BoidConfig
     {
         public float moveSpeed = 1f;
-
+        // 分離
         [Range(0f, 1f)] public float separationWeight = .5f;
-
+        // 整列
         [Range(0f, 1f)] public float alignmentWeight = .5f;
-
+        // 結合
         [Range(0f, 1f)] public float targetWeight = .5f;
 
         public Transform boidTarget;
@@ -41,7 +39,6 @@ public class Boids : MonoBehaviour
     GraphicsBuffer _boidBuffer;
     GraphicsBuffer _argsBuffer;
     int _kernelIndex;
-
 
     [SerializeField]
     Mesh mesh;
@@ -73,11 +70,15 @@ public class Boids : MonoBehaviour
         {
             boidArray[i] = new BoidState
             {
+                // 指定した範囲でランダムに座標を決定
                 Position = random.NextFloat3(-boidExtent, boidExtent),
+                // 
                 Forward = math.rotate(random.NextQuaternionRotation(), Vector3.forward),
             };
         }
+        // GraphicsBuffer生成
         _boidBuffer = new GraphicsBuffer(GraphicsBuffer.Target.Structured, boidArray.Length, Marshal.SizeOf<BoidState>());
+        // boidBufferに値を設定
         _boidBuffer.SetData(boidArray);
     }
 
@@ -100,7 +101,6 @@ public class Boids : MonoBehaviour
         BoidComputeShader.SetVector("targetPosition", boidTarget);
         // ComputeShaderに生成するインスタンスの数をセット
         BoidComputeShader.SetInt("numBoids", boidCount);
-
         _kernelIndex = BoidComputeShader.FindKernel("CSMain");
         // ComputeShaderにboidBufferをセット
         BoidComputeShader.SetBuffer(_kernelIndex, "boidBuffer", _boidBuffer);
@@ -116,8 +116,7 @@ public class Boids : MonoBehaviour
             return;
         }
         drawMaterial.SetBuffer("_BoidDataBuffer", _boidBuffer);
-        // var boidArray = new NativeArray<BoidState>(10, Allocator.Temp, NativeArrayOptions.UninitializedMemory);
-         BoidState[] data = new BoidState[10];
+        BoidState[] data = new BoidState[10];
         _boidBuffer.GetData(data);
         Debug.Log(data);
         Graphics.DrawMeshInstancedIndirect
@@ -126,9 +125,9 @@ public class Boids : MonoBehaviour
             0,
             drawMaterial,
             new Bounds(Vector3.zero, new Vector3(1000.0f, 1000.0f, 1000.0f)),
-            _argsBuffer
-        // 0,
-        // null
+            _argsBuffer,
+            0,
+            null
         );
     }
 
